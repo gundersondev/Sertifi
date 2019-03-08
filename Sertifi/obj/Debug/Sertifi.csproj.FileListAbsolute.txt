@@ -14,3 +14,11 @@ C:\Users\Chris Gunderson\Documents\Sertifi\Sertifi\bin\Debug\Sertifi.pdb
 C:\Users\Chris Gunderson\Documents\Sertifi\Sertifi\bin\Debug\Newtonsoft.Json.dll
 C:\Users\Chris Gunderson\Documents\Sertifi\Sertifi\bin\Debug\Newtonsoft.Json.pdb
 C:\Users\Chris Gunderson\Documents\Sertifi\Sertifi\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Chris Gunderson\Documents\GitHub\Sertifi\Sertifi\bin\Debug\Sertifi.exe.config
+C:\Users\Chris Gunderson\Documents\GitHub\Sertifi\Sertifi\obj\Debug\Sertifi.exe
+C:\Users\Chris Gunderson\Documents\GitHub\Sertifi\Sertifi\obj\Debug\Sertifi.pdb
+C:\Users\Chris Gunderson\Documents\GitHub\Sertifi\Sertifi\bin\Debug\Sertifi.exe
+C:\Users\Chris Gunderson\Documents\GitHub\Sertifi\Sertifi\bin\Debug\Sertifi.pdb
+C:\Users\Chris Gunderson\Documents\GitHub\Sertifi\Sertifi\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Chris Gunderson\Documents\GitHub\Sertifi\Sertifi\bin\Debug\Newtonsoft.Json.pdb
+C:\Users\Chris Gunderson\Documents\GitHub\Sertifi\Sertifi\bin\Debug\Newtonsoft.Json.xml

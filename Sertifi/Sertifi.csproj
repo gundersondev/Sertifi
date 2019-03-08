@@ -47,18 +47,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Answer.cs" />
-    <Compile Include="APIClient.cs" />
+    <Compile Include="Models\Answer.cs" />
+    <Compile Include="Application\APIClient.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Student.cs" />
-    <Compile Include="StudentStatistics.cs" />
-    <Compile Include="YearInformation.cs" />
+    <Compile Include="Models\Student.cs" />
+    <Compile Include="Application\StudentStatistics.cs" />
+    <Compile Include="Models\YearInformation.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

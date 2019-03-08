@@ -1,6 +1,8 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
 using Newtonsoft.Json;
+using Sertifi.Application;
+using Sertifi.Models;
 
 namespace Sertifi.Tests
 {

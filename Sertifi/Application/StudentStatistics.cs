@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Sertifi.Models;
 
-namespace Sertifi
+namespace Sertifi.Application
 {
     public class StudentStatistics
     {

@@ -1,4 +1,4 @@
-﻿namespace Sertifi
+﻿namespace Sertifi.Models
 {
     public class YearInformation
     {
