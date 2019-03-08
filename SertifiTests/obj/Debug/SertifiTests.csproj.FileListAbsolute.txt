@@ -11,3 +11,16 @@ c:\users\chris gunderson\documents\visual studio 2015\Projects\Sertifi\SertifiTe
 c:\users\chris gunderson\documents\visual studio 2015\Projects\Sertifi\SertifiTests\obj\Debug\SertifiTests.csproj.GenerateResource.Cache
 c:\users\chris gunderson\documents\visual studio 2015\Projects\Sertifi\SertifiTests\obj\Debug\SertifiTests.dll
 c:\users\chris gunderson\documents\visual studio 2015\Projects\Sertifi\SertifiTests\obj\Debug\SertifiTests.pdb
+C:\Users\Chris Gunderson\Documents\Sertifi\SertifiTests\bin\Debug\SertifiTests.dll
+C:\Users\Chris Gunderson\Documents\Sertifi\SertifiTests\bin\Debug\SertifiTests.pdb
+C:\Users\Chris Gunderson\Documents\Sertifi\SertifiTests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\Chris Gunderson\Documents\Sertifi\SertifiTests\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Chris Gunderson\Documents\Sertifi\SertifiTests\bin\Debug\Sertifi.exe
+C:\Users\Chris Gunderson\Documents\Sertifi\SertifiTests\bin\Debug\Sertifi.pdb
+C:\Users\Chris Gunderson\Documents\Sertifi\SertifiTests\bin\Debug\Newtonsoft.Json.pdb
+C:\Users\Chris Gunderson\Documents\Sertifi\SertifiTests\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Chris Gunderson\Documents\Sertifi\SertifiTests\obj\Debug\SertifiTests.csprojResolveAssemblyReference.cache
+C:\Users\Chris Gunderson\Documents\Sertifi\SertifiTests\obj\Debug\SertifiTests.Resource.resources
+C:\Users\Chris Gunderson\Documents\Sertifi\SertifiTests\obj\Debug\SertifiTests.csproj.GenerateResource.Cache
+C:\Users\Chris Gunderson\Documents\Sertifi\SertifiTests\obj\Debug\SertifiTests.dll
+C:\Users\Chris Gunderson\Documents\Sertifi\SertifiTests\obj\Debug\SertifiTests.pdb

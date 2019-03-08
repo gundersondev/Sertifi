@@ -68,5 +68,14 @@ namespace SertifiTests {
                 return ResourceManager.GetString("Students", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to [{&quot;Id&quot;:1,&quot;Name&quot;:&quot;Jack&quot;,&quot;StartYear&quot;:2013,&quot;EndYear&quot;:2016,&quot;GPARecord&quot;:[3.4,2.1,1.2,3.6]},{&quot;Id&quot;:2,&quot;Name&quot;:&quot;Jill&quot;,&quot;StartYear&quot;:2010,&quot;EndYear&quot;:2013,&quot;GPARecord&quot;:[3.3,2.3,1.1,3.7]},{&quot;Id&quot;:3,&quot;Name&quot;:&quot;Bob&quot;,&quot;StartYear&quot;:2010,&quot;EndYear&quot;:2012,&quot;GPARecord&quot;:[2.3,2.5,2.8]},{&quot;Id&quot;:4,&quot;Name&quot;:&quot;Alice&quot;,&quot;StartYear&quot;:2013,&quot;EndYear&quot;:2016,&quot;GPARecord&quot;:[3.6,2.9,3.4,3.7]},{&quot;Id&quot;:5,&quot;Name&quot;:&quot;Eve&quot;,&quot;StartYear&quot;:2012,&quot;EndYear&quot;:2015,&quot;GPARecord&quot;:[3.3,2.5,1.1,3.7]},{&quot;Id&quot;:6,&quot;Name&quot;:&quot;Malcom&quot;,&quot;StartYear&quot;:2011,&quot;EndYear&quot;:2014,&quot;GPARecord&quot;:[3.8,2.7,1.1,3.7]},{&quot;Id [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string StudentsEqualTest {
+            get {
+                return ResourceManager.GetString("StudentsEqualTest", resourceCulture);
+            }
+        }
     }
 }

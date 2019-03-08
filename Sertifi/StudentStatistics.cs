@@ -6,27 +6,55 @@ namespace Sertifi
 {
     public class StudentStatistics
     {
-        public int GetYearOfHighestAttendance(List<Student> students)
+        public Dictionary<int, YearInformation> PopulateClassInformation(List<Student> students)
         {
-            int result = 0;
+            Dictionary<int, YearInformation> attendanceByYear = new Dictionary<int, YearInformation>();
             try
             {
-                Dictionary<int, int> attendanceByYear = new Dictionary<int, int>();
+                if (students == null || !students.Any()) return attendanceByYear;
+
                 foreach (Student student in students)
                 {
                     int startYear = student.StartYear;
                     int endYear = student.EndYear;
+                    int count = 0;
                     for (int year = startYear; year <= endYear; year++)
                     {
                         if (attendanceByYear.ContainsKey(year))
-                            attendanceByYear[year]++;
+                        {
+                            attendanceByYear[year].NumberOfStudents++;
+                            attendanceByYear[year].SumOfGPAs += student.GPARecord[count];
+                        }
                         else
-                            attendanceByYear.Add(year, 1);
+                        {
+                            YearInformation info = new YearInformation();
+                            info.SumOfGPAs += student.GPARecord[count];
+                            info.NumberOfStudents = 1;
+                            attendanceByYear.Add(year, info);
+                        }
                     }
                 }
-                result = !attendanceByYear.Any() ? -1 : attendanceByYear.Aggregate((left, right) => left.Value > right.Value ? left :
-                                   (left.Value == right.Value && left.Key < right.Key) ? left : right).Key;
+            }
+            catch(Exception err)
+            {
+                Console.WriteLine(err.Message);
+                return new Dictionary<int, YearInformation>();
+            }
+            return attendanceByYear;
+        }
 
+        public int GetYearOfHighestAttendance(Dictionary<int, YearInformation> info)
+        {
+            int result = 0;
+            try
+            {
+                //If no data return -1
+                //Return largest student class year 
+                //If there is a tie return the earliest year
+                result = (info == null || !info.Any()) ? -1 : info.Aggregate((left, right) => 
+                                            left.Value.NumberOfStudents > right.Value.NumberOfStudents ? left :
+                                            (left.Value.NumberOfStudents == right.Value.NumberOfStudents && left.Key < right.Key) ? 
+                                            left : right).Key;
             }
             catch (Exception err)
             {
@@ -36,30 +64,19 @@ namespace Sertifi
             return result;
         }
 
-        public int GetYearWithHighestOverallGPA(List<Student> students)
+        public int GetYearWithHighestOverallGPA(Dictionary<int,YearInformation> info)
         {
-            int year = 0;
+            int result = 0;
             try
             {
-                if (students.Any())
-                {
-                    var studentWithMaxGPA = students.OrderByDescending(s => s.MaxGPA).Take(1).FirstOrDefault();
-                    int startYear = studentWithMaxGPA.StartYear;
-                    int index = Array.FindIndex(studentWithMaxGPA.GPARecord, w => w == studentWithMaxGPA.MaxGPA);
-                    year = startYear + index;
-                }
-                else
-                {
-                    year = -2;
-                }
-
+                result = (info == null || !info.Any()) ? -2 : info.OrderByDescending(g => g.Value.AverageGPA).FirstOrDefault().Key;
             }
             catch (Exception err)
             {
                 Console.WriteLine(err.Message);
                 return -2;
             }
-            return year;
+            return result;
         }
 
         public List<long> TopTenStudentsOverallGPA(List<Student> students)
@@ -67,7 +84,7 @@ namespace Sertifi
             List<long> topTen = new List<long>();
             try
             {
-                if (students.Any())
+                if (students != null && students.Any())
                 {
                     topTen = students.OrderByDescending(s => s.AverageGPA).Take(10).Select(i => i.Id).ToList();
                 }
@@ -86,26 +103,18 @@ namespace Sertifi
 
         public long StudentWithLargestGPASwing(List<Student> students)
         {
-            Student student = new Student();
+            long id = 0;
             try
             {
-                if (students.Any())
-                {
-                    student = students.OrderByDescending(s => s.DifferenceGPA).FirstOrDefault();
-                }
-                else
-                {
-                    return -4;
-                }
-
+                id = (students == null && !students.Any()) ? -4 : 
+                    students.OrderByDescending(s => s.DifferenceGPA).FirstOrDefault().Id;
             }
             catch (Exception err)
             {
                 Console.WriteLine(err.Message);
                 return -4;
             }
-
-            return student.Id;
+            return id;
         }
     }
 }

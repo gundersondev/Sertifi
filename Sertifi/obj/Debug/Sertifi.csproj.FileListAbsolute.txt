@@ -6,3 +6,11 @@ c:\users\chris gunderson\documents\visual studio 2015\Projects\Sertifi\Sertifi\b
 c:\users\chris gunderson\documents\visual studio 2015\Projects\Sertifi\Sertifi\bin\Debug\Newtonsoft.Json.xml
 c:\users\chris gunderson\documents\visual studio 2015\Projects\Sertifi\Sertifi\obj\Debug\Sertifi.exe
 c:\users\chris gunderson\documents\visual studio 2015\Projects\Sertifi\Sertifi\obj\Debug\Sertifi.pdb
+C:\Users\Chris Gunderson\Documents\Sertifi\Sertifi\bin\Debug\Sertifi.exe.config
+C:\Users\Chris Gunderson\Documents\Sertifi\Sertifi\obj\Debug\Sertifi.exe
+C:\Users\Chris Gunderson\Documents\Sertifi\Sertifi\obj\Debug\Sertifi.pdb
+C:\Users\Chris Gunderson\Documents\Sertifi\Sertifi\bin\Debug\Sertifi.exe
+C:\Users\Chris Gunderson\Documents\Sertifi\Sertifi\bin\Debug\Sertifi.pdb
+C:\Users\Chris Gunderson\Documents\Sertifi\Sertifi\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Chris Gunderson\Documents\Sertifi\Sertifi\bin\Debug\Newtonsoft.Json.pdb
+C:\Users\Chris Gunderson\Documents\Sertifi\Sertifi\bin\Debug\Newtonsoft.Json.xml

@@ -16,14 +16,22 @@ namespace Sertifi
             APIClient apiClient = new APIClient(baseUrl);
             StudentStatistics stats = new StudentStatistics();
 
-            //Get Data
+            //Get Student Data
             Task<List<Student>> students = apiClient.GetAsync(uriStudents);
+
+            //Get dictionary containing class information by year
+            Dictionary<int, YearInformation> info = new Dictionary<int, YearInformation>();
+            info = stats.PopulateClassInformation(students.Result);
+
             //Get Year of highest attendance
-            int highestAttendanceYear = stats.GetYearOfHighestAttendance(students.Result);
+            int highestAttendanceYear = stats.GetYearOfHighestAttendance(info);
+
             //Year with highest overall GPA
-            int yearGPA = stats.GetYearWithHighestOverallGPA(students.Result);
+            int yearGPA = stats.GetYearWithHighestOverallGPA(info);
+
             //Top Ten Student GPAs
             List<long> topTen = stats.TopTenStudentsOverallGPA(students.Result);
+
             //Get Student with largest GPA swing
             long largestGPASwing = stats.StudentWithLargestGPASwing(students.Result);
 

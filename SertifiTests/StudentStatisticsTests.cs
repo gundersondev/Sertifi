@@ -9,6 +9,7 @@ namespace Sertifi.Tests
     {
         List<Student> students;
         StudentStatistics stats;
+        Dictionary<int, YearInformation> info;
 
         [TestInitialize]
         public void TestInit()
@@ -16,6 +17,8 @@ namespace Sertifi.Tests
             string resVal = SertifiTests.Resource.ResourceManager.GetString("Students");
             students = JsonConvert.DeserializeObject<List<Student>>(resVal);
             stats = new StudentStatistics();
+            info = new Dictionary<int, YearInformation>();
+            info = stats.PopulateClassInformation(students);
         }
 
         [TestMethod]
@@ -33,29 +36,41 @@ namespace Sertifi.Tests
         [TestMethod()]
         public void GetYearOfHighestAttendance_StandardData_Test()
         {
-            int year = stats.GetYearOfHighestAttendance(students);
+            int year = stats.GetYearOfHighestAttendance(info);
             Assert.AreEqual(2011, year);
         }
 
         [TestMethod()]
-        public void GetYearOfHighestAttendance_NoStudents_Test()
+        public void WhenEqualAttendanceGetEarlierYear_EqualTestData_Test()
         {
-            List<Student> s = new List<Student>();
-            int year = stats.GetYearOfHighestAttendance(s);
+            string resVal = SertifiTests.Resource.ResourceManager.GetString("StudentsEqualTest");
+            students = JsonConvert.DeserializeObject<List<Student>>(resVal);
+            stats = new StudentStatistics();
+            info = new Dictionary<int, YearInformation>();
+            info = stats.PopulateClassInformation(students);
+            int year = stats.GetYearOfHighestAttendance(info);
+            Assert.AreEqual(2010, year);
+        }
+
+
+        [TestMethod()]
+        public void GetYearOfHighestAttendance_NoClassInformation_Test()
+        {
+            int year = stats.GetYearOfHighestAttendance(new Dictionary<int, YearInformation>());
             Assert.AreEqual(-1, year);
         }
 
         [TestMethod()]
         public void GetYearWithHighestOverallGPA_StandardData_Test()
         {
-            int year = stats.GetYearWithHighestOverallGPA(students);
-            Assert.AreEqual(2013, year);
+            int year = stats.GetYearWithHighestOverallGPA(info);
+            Assert.AreEqual(2008, year);
         }
 
         [TestMethod()]
-        public void GetYearWithHighestOverallGPA_NoStudents_Test()
+        public void GetYearWithHighestOverallGPA_NoClassInformation_Test()
         {
-            int year = stats.GetYearWithHighestOverallGPA(new List<Student>());
+            int year = stats.GetYearWithHighestOverallGPA(new Dictionary<int, YearInformation>());
             Assert.AreEqual(-2, year);
         }
 
