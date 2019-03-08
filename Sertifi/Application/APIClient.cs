@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Sertifi.Models;
 
-namespace Sertifi
+namespace Sertifi.Application
 {
     public class APIClient : IDisposable
     {
